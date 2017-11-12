@@ -19,6 +19,12 @@ let server = http.createServer(function(request, response) {
 });
 
 
+
+
+let chatServer = require('./lib/chat_server');
+chatServer.listen(server);
+
+
 server.listen(3000, function() {
     console.log("Server listening on port 3000.");
 });
@@ -46,6 +52,7 @@ function serveStatic(response, cache, absPath) {
         sendFile(response, absPath, cache[absPath]);  // Reture file from memory
     }
     else {
+        console.log(absPath);
         fs.exists(absPath, function(exists) {  // Check if the file exists
             if (exists) {
                 fs.readFile(absPath, function(err, data) {  // Get file from disk
