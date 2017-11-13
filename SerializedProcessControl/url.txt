@@ -1,0 +1,7 @@
+https://a.org/
+https://b.org/
+https://c.org/
+https://d.org/
+https://e.org/
+https://f.org/
+https://g.org/

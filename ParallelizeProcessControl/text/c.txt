@@ -1,0 +1,1 @@
+Synchronous version of fs.readFile(). Returns the contents of the path.
